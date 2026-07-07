@@ -34,3 +34,4 @@ jobs:
 
       - name: Push Docker Image
         run: docker push USERNAME/react-demo:v1
+        #
