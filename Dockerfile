@@ -4,10 +4,15 @@ FROM node:20 AS build
 WORKDIR /app
 
 COPY package*.json ./
+# Python 
+#requirement .txt
+
+# pip install -r requirements.txt
 
 RUN npm install
 
 COPY . .
+# 
 
 RUN npm run build
 
