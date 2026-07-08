@@ -18,6 +18,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+          # change the version if it shows error
+
 
       - run: npm install
 
@@ -32,7 +34,7 @@ jobs:
 
       - name: Build Docker Image
         run: docker build -t shivay24/react-demo:v1 .
-
+     # to push the image to docker hub we need to login first and then push the image
       - name: Push Docker Image
         run: docker push shivay24/react-demo:v1
         
